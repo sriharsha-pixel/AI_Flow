@@ -1,0 +1,304 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+
+<html>
+<head>
+  <title>Bank Deposit Report</title>
+  
+<style>
+table{font-family:Arial;font-size:10pt;color:black;}
+.repTitle{color:red;font-size:12pt;font-weight:bolder;}
+.repParm{color:black;font-size:10pt;font-weight:bolder;}
+.repHead{color:black;font-size:10pt;font-weight:bolder;}
+.repHeadSmall, .repHeadSmallShaded{color:black;font-size:8pt;font-weight:bolder;}
+.repHeadSmallShaded{background-color:#efefef;}
+.repSubHead{color:red;font-size:10pt;font-weight:bolder;}
+.repline1{border-bottom:1px solid navy;height:1px;}
+.repline2{border-bottom:1px solid navy;height:2px;}
+.repline3{border-bottom:1px solid navy;height:3px;}
+.borderright{border-right:1px solid black;border-bottom:1px solid black;border-width:1px;text-align:center;}
+.headleft{font-family:Arial;font-size:12pt;color:black;font-weight:bolder;border-bottom:1px solid black;border-width:1px;text-align:left;}
+.borderbottom{border-bottom:1px solid black;border-width:2px;}
+.bordertop{border-top:1px solid black;border-width:1px;text-align:center;}
+.bordertopr{font-family:Arial;font-size:12pt;color:black;font-weight:bolder;border-top:1px solid black;border-width:1px;text-align:right;}
+.aligncenter{text-align:center;}
+.smallData{color:black;font-size:7pt;}
+.smallerData{color:black;font-size:6pt;}
+.repHeadSmaller{color:black;font-size:7pt;font-weight:bolder;}
+.borderrightsmallrephead{border-right:1px solid black;border-bottom:1px solid black;border-width:1px;text-align:center;color:black;font-size:8pt;font-weight:bolder;}
+.repData, .repDataShaded{color:black;font-size:8pt;}
+.repDataShaded{background-color:#efefef;}
+.s1{color:black;font-size:7pt;text-align: right;}
+.s2{color:black;font-size:7pt;text-align: center;}
+.s3{color:black;font-size:7pt;text-align: center;font-weight: bold;}
+.s4{color:black;font-size:7pt;text-align: right; font-weight: bold;}
+.s5{color:black;font-size:7pt;}
+.s6{color:black;font-size:7pt;font-weight: bold;}
+.s7{color:black;font-size:6pt;text-align: right;}
+.s8{color:black;font-size:6pt;}
+.t1{width: 950px;border: 0px;padding: 0px;border-spacing: 0px;}
+table.t1 td{padding: 0px;}
+.s9{border-right:1px solid black;border-bottom:1px solid black;border-width:1px;text-align:center;color:black;font-size:8pt;font-weight:bolder;width: 30px;}
+.s10{page-break-before: always;}
+.s11{color:black;font-size:7pt;text-align: center;white-space: nowrap;}
+.s12{color:black;font-size:8pt;font-weight:bolder;}
+</style>
+  <style>@media print{@page {size: landscape}}</style>
+</head>
+<body class="emcMode">
+    <table width="950" cellpadding="0" cellspacing="0" border="0">
+  <tr><td class="repHeadSmall" width="60">Posting Date</td><td class="repHeadSmall" width="70">Facility Code</td><td class="repHeadSmall" width="250">Facility Name</td><td class="repHeadSmall" width="40">EMC Batch</td><td class="repHeadSmall" width="40">Batch</td><td class="repHeadSmall" width="60"></td><td class="repHeadSmall" width="200">Batch Description</td><td class="repHeadSmall" width="120" align=right>Batch Total</td><td class="repHeadSmall" width="10"></td><td class="repHeadSmall" width="100">GL Account</td></tr><tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5388</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 05/29/2025</td><td class="smallData" align=right >$176.98</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/2/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5392</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/02/2025</td><td class="smallData" align=right >$10,005.89</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5393</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 05/30/2025</td><td class="smallData" align=right >$8,724.37</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/4/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5395</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Epay Zunta Import-254284</td><td class="smallData" align=right >$618.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/3/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5396</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>FLORIDA BLUE 06/03/2025</td><td class="smallData" align=right >$9,688.19</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5398</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Humana 05/31/2025</td><td class="smallData" align=right >$132.43</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/5/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5399</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Epay Zunta Import-255235</td><td class="smallData" align=right >$8,952.36</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/4/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5403</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/04/2025</td><td class="smallData" align=right >$24,396.05</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5409</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Epay Zunta Import-256375</td><td class="smallData" align=right >$268.39</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/4/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5404</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 06/04/2025</td><td class="smallData" align=right >$102,927.81</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/5/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5407</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/05/2025</td><td class="smallData" align=right >$565.02</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/6/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5410</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Epay Zunta Import-257023</td><td class="smallData" align=right >$2,861.64</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5413</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Aetna/Coventry - Commercial 06/11/2025</td><td class="smallData" align=right >$1,406.25</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/6/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5411</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 06/06/2025</td><td class="smallData" align=right >$103.96</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5417</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Aetna/Coventry PPO - MGD MCR 06/11/2025</td><td class="smallData" align=right >$8,250.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5415</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>STATE OF FLORIDA MEDICAID 06/11/2025</td><td class="smallData" align=right >$1,470.92</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/9/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5418</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>ePay Import_060925</td><td class="smallData" align=right >$2,938.28</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/6/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5428</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>RFMS 06/06/2025</td><td class="smallData" align=right >$1,115.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/12/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5430</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Aetna/Coventry PPO - MGD MCR 06/12/2025</td><td class="smallData" align=right >$4,500.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/8/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5429</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 06/08/2025</td><td class="smallData" align=right >$5,100.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/5/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5431</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/05/2025</td><td class="smallData" align=right >$1,006.48</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/10/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5432</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Epay Zunta Import-257965</td><td class="smallData" align=right >$250.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/10/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5437</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Florida Community 06/06/2025</td><td class="smallData" align=right >$80,623.69</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5436</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Epay Zunta Import-258682</td><td class="smallData" align=right >$2,386.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/10/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5439</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>FLORIDA BLUE 06/10/2025</td><td class="smallData" align=right >$2,965.80</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/10/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5440</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>SIMPLY HEALTHCARE PLANS 06/10/2025</td><td class="smallData" align=right >$1,033.22</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/13/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5441</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Aetna/Coventry PPO - MGD MCR 06/13/2025</td><td class="smallData" align=right >$3,000.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5445</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#2077 - Deposit 11/25/2022 * Correction<br>*</td><td class="smallData" align=right >$2,200.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5442</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>SIMPLY HEALTHCARE PLANS 06/11/2025</td><td class="smallData" align=right >$8,519.75</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5443</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Aetna/Coventry PPO - MGD MCR 06/16/2025</td><td class="smallData" align=right >$10,800.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5444</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#2077 - Deposit 11/25/2022 * Reversals *</td><td class="smallData" align=right >($2,200.00)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/12/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5449</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>SIMPLY HEALTHCARE PLANS 06/12/2025</td><td class="smallData" align=right >$17,677.50</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5447</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>RFMS 06/11/2025</td><td class="smallData" align=right >$992.44</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/3/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5448</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>RFMS 06/03/2025</td><td class="smallData" align=right >$19,384.70</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/12/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5450</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/12/2025</td><td class="smallData" align=right >$12,630.84</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/17/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5451</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Aetna/Coventry PPO - MGD MCR 06/17/2025</td><td class="smallData" align=right >$11,625.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5452</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>COMMONWEALTH CARE ALLIANCE, INC 06/16/2025</td><td class="smallData" align=right >$2,637.18</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5455</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WELLMED MEDICAL MANAGEMENT, INC. 06/18/2025</td><td class="smallData" align=right >$30,782.73</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/13/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5456</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 06/13/2025</td><td class="smallData" align=right >$3,600.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5457</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>AARP SUPPLEMENTAL HEALTH PLANS FROM<br>UNITEDHEALTHCARE 06/18/2025</td><td class="smallData" align=right >$5,237.50</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5458</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Epay Zunta Import-260563 (1)</td><td class="smallData" align=right >$1,000.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5462</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>AETNA 06/18/2025</td><td class="smallData" align=right >$9,375.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/12/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5459</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 6/12/2025</td><td class="smallData" align=right >$1,596.04</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5460</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>money move</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/17/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5463</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Epay Zunta Import-260853</td><td class="smallData" align=right >$1,286.01</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5465</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Aetna Supple 05/29/2025</td><td class="smallData" align=right >$408.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5468</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5401 - Deposit 05/22/2025  * Correction<br>*</td><td class="smallData" align=right >$2,442.93</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/2/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5464</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS 06/02/2025</td><td class="smallData" align=right >$196.25</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5466</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UHC 05/29/2025</td><td class="smallData" align=right >$417.87</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5469</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>money move</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5467</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5401 - Deposit 05/22/2025  * Reversals<br>*</td><td class="smallData" align=right >($2,442.93)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/20/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5470</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>AETNA 06/20/2025</td><td class="smallData" align=right >$2,625.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/6/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5472</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Sunshine health 06/06/2025</td><td class="smallData" align=right >$170,182.80</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5473</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Sunshine Health 06/11/2025</td><td class="smallData" align=right >$5,742.75</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5476</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>posting correction</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5477</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5476 - posting correction * Reversals *</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5475</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/18/2025</td><td class="smallData" align=right >$26,157.99</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5478</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>posting correction</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/19/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5479</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 6/19/2025</td><td class="smallData" align=right >$28,213.76</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/20/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5480</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/20/2025</td><td class="smallData" align=right >$409,648.80</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/23/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5482</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/23/2025</td><td class="smallData" align=right >$122,239.57</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5487</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5485 - Batch#5478 -  posting correction<br>* Reversals *</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5484</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5478 -  posting correction  * Reversals<br>*</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/12/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5483</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/12/2025</td><td class="smallData" align=right >$22,355.91</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5485</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5478 -  posting correction  * Reversals<br>*</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5486</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5277 - old owner transfer part 2 *<br>Reversals *</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5490</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5486 - Batch#5277 - old owner transfer<br>part 2 * Revers</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5489</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5277 - old owner transfer part 2 *<br>Reversals *</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/24/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5493</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>SIMPLY HEALTHCARE PLANS 06/24/2025</td><td class="smallData" align=right >$129.23</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/25/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5499</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>RFMS 06/25/2025</td><td class="smallData" align=right >$6,995.97</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/25/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5494</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>TRICARE TDEFIC 06/25/2025</td><td class="smallData" align=right >$437.63</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/24/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5491</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>FLORIDA BLUE 06/24/2025</td><td class="smallData" align=right >$9,110.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5497</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5021 - CC 02/23/2025 * Reversals *</td><td class="smallData" align=right >($882.00)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5498</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5021 - CC 02/23/2025 * Correction *</td><td class="smallData" align=right >$882.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/17/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5500</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UHC 06/13/2025</td><td class="smallData" align=right >$21,252.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/2/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5501</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UHC 06/02/2025</td><td class="smallData" align=right >$29,108.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/25/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5502</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>SIMPLY HEALTHCARE PLANS 06/25/2025</td><td class="smallData" align=right >$1,272.92</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/27/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5503</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Epay Zunta Import-263783</td><td class="smallData" align=right >$1,301.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/27/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5506</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/27/2025</td><td class="smallData" align=right >$4,478.73</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/29/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5507</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Epay Zunta Import-264133</td><td class="smallData" align=right >$1,060.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/27/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5508</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/27/2025 part 1</td><td class="smallData" align=right >$9,878.10</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/30/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5509</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Epay Zunta Import-265376</td><td class="smallData" align=right >$5,886.23</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/13/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5511</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Ambetter 06/13/2025</td><td class="smallData" align=right >$8,400.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/25/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5510</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Florida Community 06/25/2205</td><td class="smallData" align=right >$1,410.91</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5513</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Correction B#5277 old owner</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/12/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5512</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Ambetter 06/12/2025</td><td class="smallData" align=right >$5,100.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5522</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5466 - UHC 05/29/2025 * Reversals *</td><td class="smallData" align=right >($417.87)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/5/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5523</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#5431 - Deposit 06/05/2025 * Reversals *</td><td class="smallData" align=right >($1,006.48)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/27/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5525</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/27/2025 WB#5508 part 2</td><td class="smallData" align=right >$10,965.25</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/20/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5527</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>FLCC 06/20/2025</td><td class="smallData" align=right >$239.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/10/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5528</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Sunshine Health 06/10/2025</td><td class="smallData" align=right >$2,745.75</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5529</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>FLCC 05/29/2025</td><td class="smallData" align=right >$239.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/13/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5540</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Cigna 06/13/2025</td><td class="smallData" align=right >$19,799.85</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5538</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UHC 06/18/2025</td><td class="smallData" align=right >$613.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/27/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5539</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UHC 06/27/2025</td><td class="smallData" align=right >$880.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/26/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5541</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UHC 06/26/2025</td><td class="smallData" align=right >$6,205.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/23/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5542</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>United American 06/23/2025</td><td class="smallData" align=right >$4,818.50</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/17/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5543</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>EPHF 06/17/2025</td><td class="smallData" align=right >$7,869.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td class="smallData">6/2/2025</td><td class="smallData">443</td><td class="smallData" style="overflow:hidden;" nowrap>Sunset Lake Health & Rehabilitation Center</td><td class="smallData"></td><td class="smallData">5544</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Molina 06/02/2025</td><td class="smallData" align=right >$38.46</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00a</td></tr>
+<tr><td colspan=7 class="repHeadSmall">Total</td><td class="repHeadSmall" align=right>$1,369,609.30</td></tr><tr><td colspan=7 class="repHeadSmall">Grand Total</td><td class="repHeadSmall" align=right>$1,369,609.30</td></tr>
+
+</table>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+
+<html>
+<head>
+  <title>Bank Deposit Report</title>
+  
+<style>
+table{font-family:Arial;font-size:10pt;color:black;}
+.repTitle{color:red;font-size:12pt;font-weight:bolder;}
+.repParm{color:black;font-size:10pt;font-weight:bolder;}
+.repHead{color:black;font-size:10pt;font-weight:bolder;}
+.repHeadSmall, .repHeadSmallShaded{color:black;font-size:8pt;font-weight:bolder;}
+.repHeadSmallShaded{background-color:#efefef;}
+.repSubHead{color:red;font-size:10pt;font-weight:bolder;}
+.repline1{border-bottom:1px solid navy;height:1px;}
+.repline2{border-bottom:1px solid navy;height:2px;}
+.repline3{border-bottom:1px solid navy;height:3px;}
+.borderright{border-right:1px solid black;border-bottom:1px solid black;border-width:1px;text-align:center;}
+.headleft{font-family:Arial;font-size:12pt;color:black;font-weight:bolder;border-bottom:1px solid black;border-width:1px;text-align:left;}
+.borderbottom{border-bottom:1px solid black;border-width:2px;}
+.bordertop{border-top:1px solid black;border-width:1px;text-align:center;}
+.bordertopr{font-family:Arial;font-size:12pt;color:black;font-weight:bolder;border-top:1px solid black;border-width:1px;text-align:right;}
+.aligncenter{text-align:center;}
+.smallData{color:black;font-size:7pt;}
+.smallerData{color:black;font-size:6pt;}
+.repHeadSmaller{color:black;font-size:7pt;font-weight:bolder;}
+.borderrightsmallrephead{border-right:1px solid black;border-bottom:1px solid black;border-width:1px;text-align:center;color:black;font-size:8pt;font-weight:bolder;}
+.repData, .repDataShaded{color:black;font-size:8pt;}
+.repDataShaded{background-color:#efefef;}
+.s1{color:black;font-size:7pt;text-align: right;}
+.s2{color:black;font-size:7pt;text-align: center;}
+.s3{color:black;font-size:7pt;text-align: center;font-weight: bold;}
+.s4{color:black;font-size:7pt;text-align: right; font-weight: bold;}
+.s5{color:black;font-size:7pt;}
+.s6{color:black;font-size:7pt;font-weight: bold;}
+.s7{color:black;font-size:6pt;text-align: right;}
+.s8{color:black;font-size:6pt;}
+.t1{width: 950px;border: 0px;padding: 0px;border-spacing: 0px;}
+table.t1 td{padding: 0px;}
+.s9{border-right:1px solid black;border-bottom:1px solid black;border-width:1px;text-align:center;color:black;font-size:8pt;font-weight:bolder;width: 30px;}
+.s10{page-break-before: always;}
+.s11{color:black;font-size:7pt;text-align: center;white-space: nowrap;}
+.s12{color:black;font-size:8pt;font-weight:bolder;}
+</style>
+  <style>@media print{@page {size: landscape}}</style>
+</head>
+<body class="emcMode">
+    <table width="950" cellpadding="0" cellspacing="0" border="0">
+  <tr><td class="repHeadSmall" width="60">Posting Date</td><td class="repHeadSmall" width="70">Facility Code</td><td class="repHeadSmall" width="250">Facility Name</td><td class="repHeadSmall" width="40">EMC Batch</td><td class="repHeadSmall" width="40">Batch</td><td class="repHeadSmall" width="60"></td><td class="repHeadSmall" width="200">Batch Description</td><td class="repHeadSmall" width="120" align=right>Batch Total</td><td class="repHeadSmall" width="10"></td><td class="repHeadSmall" width="100">GL Account</td></tr><tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13233</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 05/29/2025</td><td class="smallData" align=right >$522.34</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13234</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 05/30/2025</td><td class="smallData" align=right >$4,440.29</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/4/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13235</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>STATE OF FLORIDA MEDICAID 06/04/2025</td><td class="smallData" align=right >$304.50</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/2/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13238</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/02/2025</td><td class="smallData" align=right >$6,113.09</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/2/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13240</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/02/2025</td><td class="smallData" align=right >$4,940.30</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/2/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13241</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/02/2025</td><td class="smallData" align=right >$6,646.71</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13246</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 05/31/2025</td><td class="smallData" align=right >$609.10</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/3/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13245</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>CAREPLUS HEALTH PLANS,INC 06/03/2025</td><td class="smallData" align=right >$15,900.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/2/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13252</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 06/02/2025</td><td class="smallData" align=right >$915.78</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/3/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13253</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>SUNSHINE HEALTH 06/03/2025</td><td class="smallData" align=right >$9,657.18</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/3/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13258</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/03/2025</td><td class="smallData" align=right >$44,998.49</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/4/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13255</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE COMMUNITY PLAN 06/04/2025</td><td class="smallData" align=right >$568.10</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/3/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13257</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/03/2025</td><td class="smallData" align=right >$8,932.50</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/4/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13271</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/04/2025</td><td class="smallData" align=right >$25,710.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/6/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13272</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITED HEALTHCARE INSURANCE COMPANY 06/06/<br>2025</td><td class="smallData" align=right >$300.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/5/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13276</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITED HEALTHCARE INSURANCE COMPANY 06/05/<br>2025</td><td class="smallData" align=right >$14,679.92</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/6/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13277</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/05/2025</td><td class="smallData" align=right >$379.64</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/6/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13275</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE COMMUNITY PLAN 06/06/2025</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/9/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13278</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE 06/09/2025</td><td class="smallData" align=right >$203.17</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/6/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13282</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>AETNA BETTER HEALTH OF FLORIDA 06/06/2025</td><td class="smallData" align=right >$8,648.07</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/2/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13280</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Wellmed VCC 06/02/2025</td><td class="smallData" align=right >$470.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/9/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13283</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE COMMUNITY PLAN 06/09/2025</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/4/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13279</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/04/2025</td><td class="smallData" align=right >$5,909.75</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/5/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13281</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Wellmed VCC 06/05/2025</td><td class="smallData" align=right >$1,410.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/4/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13285</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 06/04/2025</td><td class="smallData" align=right >$102,987.03</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/9/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13286</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>SUNSHINE HEALTH 06/09/2025</td><td class="smallData" align=right >$7,399.60</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/7/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13288</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Aetna (4 Levels) MED ADVANTAGE 06/07/2025</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13299</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE COMMUNITY PLAN 06/11/2025</td><td class="smallData" align=right >$87,174.76</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/3/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13295</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>RFMS 06/03/2025</td><td class="smallData" align=right >$2,019.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/6/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13292</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>SUNSHINE HEALTH 06/06/2025</td><td class="smallData" align=right >$80,549.41</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/3/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13296</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>RFMS 06/03/2025</td><td class="smallData" align=right >$23,385.55</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/4/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13297</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>RFMS 06/04/2025</td><td class="smallData" align=right >$807.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13298</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE 06/11/2025</td><td class="smallData" align=right >$13,583.47</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13300</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE COMMUNITY PLAN 06/11/2025</td><td class="smallData" align=right >$35,520.58</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/5/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13303</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Credit Card 06/04/2025</td><td class="smallData" align=right >$1,062.96</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13307</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Adj to B#13137</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/5/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13304</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/05/2025</td><td class="smallData" align=right >$2,003.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/6/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13305</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/06/2025</td><td class="smallData" align=right >$13,364.21</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/10/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13311</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/10/2025</td><td class="smallData" align=right >$3,461.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13312</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/11/2025</td><td class="smallData" align=right >$2,649.95</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/10/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13313</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/10/2025</td><td class="smallData" align=right >$3,806.55</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/13/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13319</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE COMMUNITY PLAN 06/13/2025</td><td class="smallData" align=right >$21,634.45</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13317</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 06/11/2025</td><td class="smallData" align=right >$7,373.07</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13318</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/11/2025</td><td class="smallData" align=right >$28,439.88</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13320</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE 06/16/2025</td><td class="smallData" align=right >$8,004.07</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/9/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13321</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>RFMS 06/09/2025</td><td class="smallData" align=right >$3,730.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13325</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>SUNSHINE HEALTH 06/16/2025</td><td class="smallData" align=right >$11,900.43</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/17/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13323</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITED HEALTHCARE INSURANCE COMPANY 06/17/<br>2025</td><td class="smallData" align=right >$3,290.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13324</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>STATE OF FLORIDA MEDICAID 06/18/2025</td><td class="smallData" align=right >$21,089.63</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13326</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/16/2025</td><td class="smallData" align=right >$466.99</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/23/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13330</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adjustment for batch 13283</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/11/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13327</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Credit Card 06/11/2025</td><td class="smallData" align=right >$3,830.29</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/20/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13329</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Adjustment for batch 13255</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/10/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13337</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>VA 06/10/2025</td><td class="smallData" align=right >$18,232.78</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13331</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/16/2025</td><td class="smallData" align=right >$143,276.14</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13336</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Correction B#13223</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/9/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13338</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>VA 06/09/2025</td><td class="smallData" align=right >$167,823.80</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/13/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13339</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>VA 06/13/2025</td><td class="smallData" align=right >$25,383.01</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13332</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/16/2025</td><td class="smallData" align=right >$35,219.31</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13333</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>SUNSHINE HEALTH 06/13/2025</td><td class="smallData" align=right >$7,104.07</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/17/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13340</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>AMBETTER 06/17/2025</td><td class="smallData" align=right >$9,300.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13342</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/18/2025</td><td class="smallData" align=right >$1,874.72</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13343</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Credit Card 06/13/2025</td><td class="smallData" align=right >$725.12</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/17/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13341</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>SUNSHINE HEALTH 06/17/2025</td><td class="smallData" align=right >$4,507.40</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13345</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13344</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>VA 06/16/2025</td><td class="smallData" align=right >$50,505.52</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13346</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/18/2025</td><td class="smallData" align=right >$25,993.42</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13350</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Humana 05/28/2025</td><td class="smallData" align=right >$2,842.69</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13349</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Humana 05/28/2025</td><td class="smallData" align=right >$176.74</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/5/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13348</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Freedom Health 06/03/2025</td><td class="smallData" align=right >$19,060.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13351</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Wellmed CC 06/18/2025</td><td class="smallData" align=right >$12,540.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13352</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Credit Card 06/18/2025</td><td class="smallData" align=right >$831.21</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13353</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Credit Card 06/18/2025</td><td class="smallData" align=right >$618.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13354</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Credit Card 06/18/2025</td><td class="smallData" align=right >$206.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13355</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>RFMS 06/18/2025</td><td class="smallData" align=right >$818.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/20/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13356</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/20/2025</td><td class="smallData" align=right >$14,256.93</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/23/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13358</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE 06/23/2025</td><td class="smallData" align=right >$3,386.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/19/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13357</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>SUNSHINE HEALTH 06/19/2025</td><td class="smallData" align=right >$1,904.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/24/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13361</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE COMMUNITY PLAN 06/24/2025</td><td class="smallData" align=right >$13,905.65</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/24/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13362</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITED HEALTHCARE INSURANCE COMPANY 06/24/<br>2025</td><td class="smallData" align=right >$400.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/25/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13364</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>STATE OF FLORIDA MEDICAID 06/25/2025</td><td class="smallData" align=right >$679.44</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/23/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13365</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/23/2025</td><td class="smallData" align=right >$10,951.97</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/23/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13366</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/23/2025</td><td class="smallData" align=right >$32,368.95</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13370</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#13172 - adj * Reversals *</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/25/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13371</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE COMMUNITY PLAN 06/25/2025</td><td class="smallData" align=right >$628.50</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13367</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/20/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13368</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Credit Card 06/20/2025</td><td class="smallData" align=right >$2,410.67</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13369</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13372</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Correction For B#13091</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/20/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13377</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Credit Card 06/20/2025 With B#13351- Actual $<br>14195.21</td><td class="smallData" align=right >$1,655.21</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13378</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/20/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13373</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Credit Card 06/20/2025</td><td class="smallData" align=right >$7,577.20</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/12/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13379</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Aetna Offset 06/12/2025</td><td class="smallData" align=right >$3,490.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/25/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13381</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/25/2025_ Actual $60519.97 With B#<br>13379 Query Sent</td><td class="smallData" align=right >$56,579.97</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13375</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13376</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/25/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13380</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/25/2025</td><td class="smallData" align=right >$5,535.01</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13382</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13384</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/26/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13383</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/26/2025</td><td class="smallData" align=right >$120.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/26/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13394</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>AARP SUPPLEMENTAL HEALTH PLANS FROM<br>UNITEDHEALTHCARE 06/26/2025</td><td class="smallData" align=right >$9,008.50</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/24/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13391</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 06/24/2025</td><td class="smallData" align=right >$376.35</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13396</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/24/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13393</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/24/2025</td><td class="smallData" align=right >$291,638.14</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/27/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13395</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>UNITEDHEALTHCARE 06/27/2025</td><td class="smallData" align=right >$8,498.07</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/25/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13397</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>HUMANA INC. 06/25/2025</td><td class="smallData" align=right >$976.36</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/26/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13398</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/26/2025</td><td class="smallData" align=right >$51,794.28</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/27/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13401</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>WPS GHA - MAC J5 PART A 06/27/2025</td><td class="smallData" align=right >$29,479.49</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/26/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13405</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>RFMS 06/25/2025</td><td class="smallData" align=right >$900.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/26/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13406</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>RFMS 06/25/2025</td><td class="smallData" align=right >$156.97</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/25/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13407</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/25/2025 With B#13381, B#13379</td><td class="smallData" align=right >$450.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/27/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13409</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/27/2025</td><td class="smallData" align=right >$770.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/30/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13413</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Aco Adjustment</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/30/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13414</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>RFMS 06/30/2025</td><td class="smallData" align=right >$490.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13418</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/20/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13416</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#13368 - Credit Card 06/20/2025 *<br>Reversals *</td><td class="smallData" align=right >($2,410.67)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13417</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/30/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13421</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Lane aco adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/2/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13427</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>NSF 06/02/2025</td><td class="smallData" align=right >($120.00)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/6/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13429</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>nsf 06/06/2025</td><td class="smallData" align=right >($1,469.75)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/25/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13430</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>nsf 06/25/2025</td><td class="smallData" align=right >($2,410.67)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13426</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13436</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13435</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/20/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13454</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>FL Community Care 05/27/2025</td><td class="smallData" align=right >$268,419.37</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/30/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13448</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>aco adjustments</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13449</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13450</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#13352 - Credit Card 06/18/2025 *<br>Reversals *</td><td class="smallData" align=right >($831.21)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13451</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#13353 - Credit Card 06/18/2025 *<br>Reversals *</td><td class="smallData" align=right >($618.00)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13452</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#13354 - Credit Card 06/18/2025 *<br>Reversals *</td><td class="smallData" align=right >($206.00)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/20/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13457</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>NDC SPLIT DEP 06/20/2025</td><td class="smallData" align=right >$227.25</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/18/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13453</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#13373 - Credit Card 06/20/2025 *<br>Reversals *</td><td class="smallData" align=right >($7,577.20)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/1/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13464</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>adj</td><td class="smallData" align=right >$0.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13474</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Batch#13331 - Deposit 06/16/2025 * Reversals<br>*</td><td class="smallData" align=right >($780.00)</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td class="smallData">6/16/2025</td><td class="smallData">712</td><td class="smallData" style="overflow:hidden;" nowrap>Lady Lake Specialty Care Center</td><td class="smallData"></td><td class="smallData">13475</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;" nowrap>Deposit 06/16/2025</td><td class="smallData" align=right >$780.00</td><td class="smallData"></td><td class="smallData" style="overflow:hidden;">1200-000-00</td></tr>
+<tr><td colspan=7 class="repHeadSmall">Total</td><td class="repHeadSmall" align=right>$1,982,220.52</td></tr><tr><td colspan=7 class="repHeadSmall">Grand Total</td><td class="repHeadSmall" align=right>$1,982,220.52</td></tr>
+
+</table>
+
+
+
+
+
+
+</body>
+</html>

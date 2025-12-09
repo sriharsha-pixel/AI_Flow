@@ -1,0 +1,54 @@
+pipeline {
+    agent any
+
+    environment {
+        CI = 'true'
+    }
+    
+    tools {
+        allure 'Allure'
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                echo 'Checking out code...'
+                checkout scm
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                echo 'Installing Node.js dependencies...'
+                bat 'npm install'
+            }
+        }
+
+        stage('Install Playwright Browsers') {
+            steps {
+                echo 'Installing Playwright browsers...'
+                bat 'npx playwright install'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                echo 'Running Playwright tests...'
+                bat 'npm test'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Archiving test results and reports...'
+            archiveArtifacts artifacts: 'allure-results/**', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'allure-report/**', allowEmptyArchive: true
+            echo 'Publishing Allure report...'
+            allure([
+                reportBuildPolicy: 'ALWAYS',
+                results: [[path: 'allure-results']]
+            ])
+        }
+    }
+}
