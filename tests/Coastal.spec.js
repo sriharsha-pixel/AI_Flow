@@ -126,7 +126,6 @@ test("Comparing Stage Env Data with Prod Env Data", async({page})=>{
     await cashPosting.compareAndExportReversalTransactionMismatch(testEnvData,"ReversalTransactions",mismatchFile);
     }
     if(await page.locator("//h3[text()='Internal Bank Transfers']").isVisible()){
-    await cashPosting.compareAndExportInternalBankTransfersMismatch(testEnvData,"",mismatchFile);
     await cashPosting.compareAndExportInternalBankTransfersMismatch(testEnvData,"InternalBankTransfers",mismatchFile);
     }
     if(await page.locator("//h3[text()='NDC Sweeps']").isVisible()){

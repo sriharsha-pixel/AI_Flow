@@ -1,0 +1,479 @@
+first card,prod data [
+  {
+    TotalTransactions: '113',
+    Matched: '55',
+    Transfers: '45',
+    NDCSweeps: '5',
+    Unmatched: '8',
+    MatchRate: '87.3%'
+  }
+]
+test data [
+  {
+    TotalTransactions: '113',
+    Matched: '55',
+    Transfers: '45',
+    NDCSweeps: '5',
+    Unmatched: '8',
+    MatchRate: '87.3%'
+  }
+]
+All data matched!
+All data matched, old mismatch sheet removed if present!
+prodData [
+  {
+    TotalTransactions: '89',
+    Matched: '72',
+    NSFs: '0',
+    Reversals: '0',
+    Unmatched: '17',
+    MatchRate: '80.9%'
+  }
+]
+testdata [
+  {
+    TotalTransactions: '89',
+    Matched: '72',
+    NSFs: '0',
+    Reversals: '0',
+    Unmatched: '17',
+    MatchRate: '80.9%'
+  }
+]
+All data matched!
+All data matched, old mismatch sheet removed if present!
+All data matched!
+All data matched, old mismatch sheet removed if present!
+All data matched!
+All data matched, old mismatch sheet removed if present!
+now  55
+All data matched!
+All data matched, old mismatch sheet removed if present!
+[
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$59.49',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$215.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$276.06',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$500.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$583.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$663.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$1,159.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$1,170.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$1,186.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$1,494.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$2,537.94',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$4,400.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$8,951.25',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$8,951.25',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$8,951.25',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$9,820.36',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$17,902.50',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  }
+]
+All data matched!
+All data matched, old mismatch sheet removed if present!
+All data matched!
+All data matched, old mismatch sheet removed if present!
+46
+Internal Transfer prod LastRow Data 46 [ 'Internal Bank Transfers Subtotal', '$28,042,583.18' ]
+The data to write excel Internal Transfers Internal Bank Transfers Subtotal : $28,042,583.18
+All data matched!
+All data matched, old mismatch sheet removed if present!
+46
+Internal Transfer prod LastRow Data 46 [ 'Internal Bank Transfers Subtotal', '$28,042,583.18' ]
+The data to write excel Internal Transfers Internal Bank Transfers Subtotal : $28,042,583.18
+All data matched!
+All data matched, old mismatch sheet removed if present!
+The data to write NDC Sweeps excel NDC Sweeps Subtotal : $15,902.15
+All data matched!
+All data matched, old mismatch sheet removed if present!
+Last card prod data [
+  { A: 'Total Billing System Transactions:', B: '$962,247.39', C: '' },
+  { A: 'RFMS Account # ****5936:', B: '$16,087.90', C: '' },
+  { A: 'Princ PAY Webster X6747:', B: '$438,840.01', C: '' },
+  { A: 'Princ GOV Sterling X2315:', B: '$742,666.62', C: '' },
+  { A: 'Princ DEP Sterling X2316:', B: '$962,061.64', C: '' },
+  { A: 'Princ OPE Sterling X2312:', B: '$26,868,965.08', C: '' },
+  { A: 'Total Bank Deposits:', B: '$29,028,621.25', C: '' },
+  { A: 'Less: Transfers:', B: '($28,042,583.18)', C: '' },
+  { A: 'Less: NDC Sweeps:', B: '($15,902.15)', C: '' },
+  { A: 'Less: Bank Exceptions:', B: '($0.00)', C: '' },
+  { A: 'NSF Transactions:', B: '$0.00', C: '' },
+  { A: '08/21/2025', B: 'ACH', C: '$59.49' },
+  { A: '08/21/2025', B: 'ACH', C: '$215.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$276.06' },
+  { A: '08/21/2025', B: 'ACH', C: '$500.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$583.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$663.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,159.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,170.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,186.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,494.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$2,537.94' },
+  { A: '08/21/2025', B: 'ACH', C: '$4,400.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$8,951.25' },
+  { A: '08/21/2025', B: 'ACH', C: '$8,951.25' },
+  { A: '08/21/2025', B: 'ACH', C: '$8,951.25' },
+  { A: '08/21/2025', B: 'ACH', C: '$9,820.36' },
+  { A: '08/21/2025', B: 'ACH', C: '$17,902.50' },
+  { A: 'Total Unmatched Billing System:', B: '$68,820.10', C: '' },
+  { A: 'Total Deposits:', B: '$970,135.92', C: '' },
+  { A: 'Total Cash Receipts:', B: '$962,247.39', C: '' },
+  { A: 'Difference:', B: '$7,888.53', C: '' }
+]
+------Last card test data--------  [
+  { A: 'Total Billing System Transactions:', B: '$962,247.39', C: '' },
+  { A: 'RFMS Account # ****5936:', B: '$16,087.90', C: '' },
+  { A: 'Princ PAY Webster X6747:', B: '$438,840.01', C: '' },
+  { A: 'Princ GOV Sterling X2315:', B: '$742,666.62', C: '' },
+  { A: 'Princ DEP Sterling X2316:', B: '$962,061.64', C: '' },
+  { A: 'Princ OPE Sterling X2312:', B: '$26,868,965.08', C: '' },
+  { A: 'Total Bank Deposits:', B: '$29,028,621.25', C: '' },
+  { A: 'Less: Transfers:', B: '($28,042,583.18)', C: '' },
+  { A: 'Less: NDC Sweeps:', B: '($15,902.15)', C: '' },
+  { A: 'Less: Bank Exceptions:', B: '($0.00)', C: '' },
+  { A: 'NSF Transactions:', B: '$0.00', C: '' },
+  { A: '08/21/2025', B: 'ACH', C: '$59.49' },
+  { A: '08/21/2025', B: 'ACH', C: '$215.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$276.06' },
+  { A: '08/21/2025', B: 'ACH', C: '$500.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$583.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$663.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,159.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,170.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,186.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,494.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$2,537.94' },
+  { A: '08/21/2025', B: 'ACH', C: '$4,400.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$8,951.25' },
+  { A: '08/21/2025', B: 'ACH', C: '$8,951.25' },
+  { A: '08/21/2025', B: 'ACH', C: '$8,951.25' },
+  { A: '08/21/2025', B: 'ACH', C: '$9,820.36' },
+  { A: '08/21/2025', B: 'ACH', C: '$17,902.50' },
+  { A: 'Total Unmatched Billing System:', B: '$68,820.10', C: '' },
+  { A: 'Total Deposits:', B: '$970,135.92', C: '' },
+  { A: 'Total Cash Receipts:', B: '$962,247.39', C: '' },
+  { A: 'Difference:', B: '$7,888.53', C: '' }
+]
+All data matched!
+All data matched, old mismatch sheet removed if present!
+first card,prod data [
+  {
+    TotalTransactions: '113',
+    Matched: '55',
+    Transfers: '45',
+    NDCSweeps: '5',
+    Unmatched: '8',
+    MatchRate: '87.3%'
+  }
+]
+test data [
+  {
+    TotalTransactions: '113',
+    Matched: '55',
+    Transfers: '45',
+    NDCSweeps: '5',
+    Unmatched: '8',
+    MatchRate: '87.3%'
+  }
+]
+All data matched!
+All data matched, old mismatch sheet removed if present!
+prodData [
+  {
+    TotalTransactions: '89',
+    Matched: '72',
+    NSFs: '0',
+    Reversals: '0',
+    Unmatched: '17',
+    MatchRate: '80.9%'
+  }
+]
+testdata [
+  {
+    TotalTransactions: '89',
+    Matched: '72',
+    NSFs: '0',
+    Reversals: '0',
+    Unmatched: '17',
+    MatchRate: '80.9%'
+  }
+]
+All data matched!
+All data matched, old mismatch sheet removed if present!
+All data matched!
+All data matched, old mismatch sheet removed if present!
+All data matched!
+All data matched, old mismatch sheet removed if present!
+now  55
+All data matched!
+All data matched, old mismatch sheet removed if present!
+[
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$59.49',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$215.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$276.06',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$500.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$583.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$663.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$1,159.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$1,170.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$1,186.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$1,494.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$2,537.94',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$4,400.00',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$8,951.25',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$8,951.25',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$8,951.25',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$9,820.36',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  },
+  {
+    BillingSysDate: '08/21/2025',
+    Amount: '$17,902.50',
+    BillingSysDesc: 'ACH',
+    Status: 'Unmatched'
+  }
+]
+All data matched!
+All data matched, old mismatch sheet removed if present!
+All data matched!
+All data matched, old mismatch sheet removed if present!
+46
+Internal Transfer prod LastRow Data 46 [ 'Internal Bank Transfers Subtotal', '$28,042,583.18' ]
+The data to write excel Internal Transfers Internal Bank Transfers Subtotal : $28,042,583.18
+All data matched!
+All data matched, old mismatch sheet removed if present!
+The data to write NDC Sweeps excel NDC Sweeps Subtotal : $15,902.15
+All data matched!
+All data matched, old mismatch sheet removed if present!
+Last card prod data [
+  { A: 'Total Billing System Transactions:', B: '$962,247.39', C: '' },
+  { A: 'RFMS Account # ****5936:', B: '$16,087.90', C: '' },
+  { A: 'Princ PAY Webster X6747:', B: '$438,840.01', C: '' },
+  { A: 'Princ GOV Sterling X2315:', B: '$742,666.62', C: '' },
+  { A: 'Princ DEP Sterling X2316:', B: '$962,061.64', C: '' },
+  { A: 'Princ OPE Sterling X2312:', B: '$26,868,965.08', C: '' },
+  { A: 'Total Bank Deposits:', B: '$29,028,621.25', C: '' },
+  { A: 'Less: Transfers:', B: '($28,042,583.18)', C: '' },
+  { A: 'Less: NDC Sweeps:', B: '($15,902.15)', C: '' },
+  { A: 'Less: Bank Exceptions:', B: '($0.00)', C: '' },
+  { A: 'NSF Transactions:', B: '$0.00', C: '' },
+  { A: '08/21/2025', B: 'ACH', C: '$59.49' },
+  { A: '08/21/2025', B: 'ACH', C: '$215.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$276.06' },
+  { A: '08/21/2025', B: 'ACH', C: '$500.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$583.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$663.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,159.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,170.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,186.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,494.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$2,537.94' },
+  { A: '08/21/2025', B: 'ACH', C: '$4,400.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$8,951.25' },
+  { A: '08/21/2025', B: 'ACH', C: '$8,951.25' },
+  { A: '08/21/2025', B: 'ACH', C: '$8,951.25' },
+  { A: '08/21/2025', B: 'ACH', C: '$9,820.36' },
+  { A: '08/21/2025', B: 'ACH', C: '$17,902.50' },
+  { A: 'Total Unmatched Billing System:', B: '$68,820.10', C: '' },
+  { A: 'Total Deposits:', B: '$970,135.92', C: '' },
+  { A: 'Total Cash Receipts:', B: '$962,247.39', C: '' },
+  { A: 'Difference:', B: '$7,888.53', C: '' }
+]
+------Last card test data--------  [
+  { A: 'Total Billing System Transactions:', B: '$962,247.39', C: '' },
+  { A: 'RFMS Account # ****5936:', B: '$16,087.90', C: '' },
+  { A: 'Princ PAY Webster X6747:', B: '$438,840.01', C: '' },
+  { A: 'Princ GOV Sterling X2315:', B: '$742,666.62', C: '' },
+  { A: 'Princ DEP Sterling X2316:', B: '$962,061.64', C: '' },
+  { A: 'Princ OPE Sterling X2312:', B: '$26,868,965.08', C: '' },
+  { A: 'Total Bank Deposits:', B: '$29,028,621.25', C: '' },
+  { A: 'Less: Transfers:', B: '($28,042,583.18)', C: '' },
+  { A: 'Less: NDC Sweeps:', B: '($15,902.15)', C: '' },
+  { A: 'Less: Bank Exceptions:', B: '($0.00)', C: '' },
+  { A: 'NSF Transactions:', B: '$0.00', C: '' },
+  { A: '08/21/2025', B: 'ACH', C: '$59.49' },
+  { A: '08/21/2025', B: 'ACH', C: '$215.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$276.06' },
+  { A: '08/21/2025', B: 'ACH', C: '$500.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$583.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$663.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,159.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,170.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,186.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$1,494.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$2,537.94' },
+  { A: '08/21/2025', B: 'ACH', C: '$4,400.00' },
+  { A: '08/21/2025', B: 'ACH', C: '$8,951.25' },
+  { A: '08/21/2025', B: 'ACH', C: '$8,951.25' },
+  { A: '08/21/2025', B: 'ACH', C: '$8,951.25' },
+  { A: '08/21/2025', B: 'ACH', C: '$9,820.36' },
+  { A: '08/21/2025', B: 'ACH', C: '$17,902.50' },
+  { A: 'Total Unmatched Billing System:', B: '$68,820.10', C: '' },
+  { A: 'Total Deposits:', B: '$970,135.92', C: '' },
+  { A: 'Total Cash Receipts:', B: '$962,247.39', C: '' },
+  { A: 'Difference:', B: '$7,888.53', C: '' }
+]
+All data matched!
+All data matched, old mismatch sheet removed if present!

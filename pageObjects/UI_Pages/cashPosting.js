@@ -14,6 +14,7 @@ exports.CashPosting = class CashPosting {
     constructor(test, page) {
         this.test=test;
         this.page=page;
+        this.lbl_NoTransactions=page.locator("//div[contains(text(),'No transactions to display')]");
         this.firstcard=page.locator("(//div[@data-radix-scroll-area-content]/div/div)[1]");
         this.cashPostinggetStartedBtn=page.locator("//h3[text()='Cash Posting Reconciliation']/following::button[1]");
         this.bankStatementFileUploadBtn=page.locator("//input[@id='bank-file-input']");
@@ -161,7 +162,6 @@ exports.CashPosting = class CashPosting {
         await this.rfmsFileUploadBtn.setInputFiles(rfmsFiles);
         const billingFiles = getFilesFromFolder(billingSystemFileFolder);
         await this.billingSystemfileUploadBtn.setInputFiles(billingFiles);
-
         await this.page.waitForTimeout(parseInt(process.env.mediumWait));
         await this.scrollTillRunReconsillationBtn();
         await this.clickOnreconsillationBtn();
@@ -359,11 +359,16 @@ exports.CashPosting = class CashPosting {
         if  (await this.tbl_cashReceiptsInBIllingSystem.isVisible()){
             await expect.soft(this.tbl_cashReceiptsInBIllingSystem).toBeVisible()
         }else{
-            await this.header_cashReceiptsInBIllingSystem.click()
+            await this.header_cashReceiptsInBIllingSystem.click();
+            if (await this.lbl_NoTransactions.isVisible()) {
+        console.log("No Internal Bank Transfer transactions found");
+        await this.header_cashReceiptsInBIllingSystem.click()
+        return; // stop further execution
+        }
             await expect.soft(this.tbl_cashReceiptsInBIllingSystem).toBeVisible()
         }
         await this.page.waitForTimeout(parseInt(process.env.mediumWait));
-        await this.page.locator
+        
         const rows = await this.tbl_cashReceiptsInBIllingSystemAll.all();
         const tableData = [];
         console.log(rows);
@@ -385,6 +390,11 @@ exports.CashPosting = class CashPosting {
     compareAndExportCashReceiptsInBillingSystem = async (testEnvData,mismatchSheetName,mismatchFile) => {
     await scrollToElement(this.header_cashReceiptsInBIllingSystem);
     await this.page.waitForTimeout(parseInt(process.env.mediumWait));
+    if (await this.lbl_NoTransactions.isVisible()) {
+        console.log("No Internal Bank Transfer transactions found");
+        await this.header_cashReceiptsInBIllingSystem.click()
+        return; // stop further execution
+        }
     const rows = await this.tbl_cashReceiptsInBIllingSystemAll.all();
     const prodData = [];
     for (let i = 1; i < rows.length; i++) {
@@ -477,10 +487,16 @@ exports.CashPosting = class CashPosting {
                 await expect.soft(this.tblDepositsInBankRFMS).toBeVisible()
             }else
             {
-                await this.headerDepositsInBankRFMS.click()
+                await this.headerDepositsInBankRFMS.click();
+                if (await this.lbl_NoTransactions.isVisible()) {
+        console.log("No Internal Bank Transfer transactions found");
+        await this.headerDepositsInBankRFMS.click()
+        return; // stop further execution
+        }
                 await expect.soft(this.tblDepositsInBankRFMS).toBeVisible()
             }
         await this.page.waitForTimeout(parseInt(process.env.mediumWait));
+        
         const rows = await this.tblDepositsInBankRFMSAll.all();
         const tableData = [];
         console.log(rows);
@@ -503,11 +519,17 @@ exports.CashPosting = class CashPosting {
         if  (await this.tblDepositsInBankRFMS.isVisible()){
             await expect.soft(this.tblDepositsInBankRFMS).toBeVisible()
         }else{
-            await this.headerDepositsInBankRFMS.click()
+            await this.headerDepositsInBankRFMS.click();
+            if (await this.lbl_NoTransactions.isVisible()) {
+        console.log("No Internal Bank Transfer transactions found");
+        await this.headerDepositsInBankRFMS.click()
+        return; // stop further execution
+        }
             await expect.soft(this.tblDepositsInBankRFMS).toBeVisible()
         }
         
         await this.page.waitForTimeout(parseInt(process.env.mediumWait));
+        
         const rows = await this.tblDepositsInBankRFMSAll.all();
         const prodData = [];
 
@@ -604,11 +626,17 @@ exports.CashPosting = class CashPosting {
         if  (await this.tbl_NSFTransactions.isVisible()){
             await expect.soft(this.tbl_NSFTransactions).toBeVisible()
         }else{
-            await this.headerNSFTransactions.click()
+            await this.headerNSFTransactions.click();
+            if (await this.lbl_NoTransactions.isVisible()) {
+        console.log("No Internal Bank Transfer transactions found");
+        await this.headerNSFTransactions.click()
+        return; // stop further execution
+        }
             await expect.soft(this.tbl_NSFTransactions).toBeVisible()
         }
 
         await this.page.waitForTimeout(parseInt(process.env.mediumWait));
+        
         const rows = await this.tbl_NSFTransactionsAll.all();
         const tableData = [];
         console.log(rows);
@@ -632,11 +660,17 @@ exports.CashPosting = class CashPosting {
 
             await expect(this.tbl_NSFTransactions).toBeVisible()
         }else{
-            await this.headerNSFTransactions.click()
+            await this.headerNSFTransactions.click();
+            if (await this.lbl_NoTransactions.isVisible()) {
+        console.log("No Internal Bank Transfer transactions found");
+        await this.headerNSFTransactions.click()
+        return; // stop further execution
+        }
             await expect(this.tbl_NSFTransactions).toBeVisible()
         }
 
         await this.page.waitForTimeout(parseInt(process.env.mediumWait));
+        
         const rows = await this.tbl_NSFTransactionsAll.all();
         const prodData = [];
 
@@ -730,7 +764,12 @@ exports.CashPosting = class CashPosting {
         if  (await this.tbl_ReversalTransactions.isVisible()){
             await expect.soft(this.tbl_ReversalTransactions).toBeVisible()
         }else{
-            await this.headerReversalTransactions.click()
+            await this.headerReversalTransactions.click();
+            if (await this.lbl_NoTransactions.isVisible()) {
+        console.log("No Internal Bank Transfer transactions found");
+        await this.headerReversalTransactions.click()
+        return; // stop further execution
+        }
             await expect.soft(this.tbl_ReversalTransactions).toBeVisible()
         }
 
@@ -756,7 +795,12 @@ exports.CashPosting = class CashPosting {
         if  (await this.tbl_ReversalTransactions.isVisible()){
             await expect.soft(this.tbl_ReversalTransactions).toBeVisible()
         }else{
-            await this.headerReversalTransactions.click()
+            await this.headerReversalTransactions.click();
+             if (await this.lbl_NoTransactions.isVisible()) {
+        console.log("No Internal Bank Transfer transactions found");
+        await this.headerReversalTransactions.click()
+        return; // stop further execution
+        }
             await expect.soft(this.tbl_ReversalTransactions).toBeVisible()
         }
 
@@ -853,10 +897,15 @@ exports.CashPosting = class CashPosting {
             
             await expect.soft(this.tbl_InternalBankTransfers).toBeVisible()
         }else{
-            await this.headerInternalBankTransfers.click()
+            await this.headerInternalBankTransfers.click();
+            if (await this.lbl_NoTransactions.isVisible()) {
+        console.log("No Internal Bank Transfer transactions found");
+        await this.headerInternalBankTransfers.click()
+        return; // stop further execution
+    }
             await expect.soft(this.tbl_InternalBankTransfers).toBeVisible()
         }
-
+        
         await this.page.waitForTimeout(parseInt(process.env.mediumWait));
         const rows = await this.tbl_InternalBankTransfersAll.all();
         const tableData = [];
@@ -896,11 +945,17 @@ exports.CashPosting = class CashPosting {
             
             await expect.soft(this.tbl_InternalBankTransfers).toBeVisible()
         }else{
-            await this.headerInternalBankTransfers.click()
+            await this.headerInternalBankTransfers.click();
+            if (await this.lbl_NoTransactions.isVisible()) {
+        console.log("No Internal Bank Transfer transactions found");
+        await this.headerInternalBankTransfers.click()
+        return; // stop further execution
+        }
             await expect.soft(this.tbl_InternalBankTransfers).toBeVisible()
         }
 
         await this.page.waitForTimeout(parseInt(process.env.mediumWait));
+        
         const rows = await this.tbl_InternalBankTransfersAll.all();
         const prodData = [];
         for (let i = 1; i < rows.length-1; i++) {
@@ -1016,9 +1071,15 @@ exports.CashPosting = class CashPosting {
         if  (await this.tbl_NDCSweeps.isVisible()){
             await expect.soft(this.tbl_NDCSweeps).toBeVisible()
         }else{
-            await this.headerNDCSweeps.click()
+            await this.headerNDCSweeps.click();
+            if (await this.lbl_NoTransactions.isVisible()) {
+        console.log("No Internal Bank Transfer transactions found");
+        await this.headerNDCSweeps.click();
+        return; // stop further execution
+        }
             await expect.soft(this.tbl_NDCSweeps).toBeVisible()
         }
+        
         const rows = await this.tbl_NDCSweepsAll.all();
         const tableData = [];
         console.log("NDC Sweeps Table RowCount: ", rows.length)
@@ -1059,8 +1120,14 @@ exports.CashPosting = class CashPosting {
             await expect.soft(this.tbl_NDCSweeps).toBeVisible()
         }else{
             await this.headerNDCSweeps.click()
+            if (await this.lbl_NoTransactions.isVisible()) {
+        console.log("No Internal Bank Transfer transactions found");
+        await this.headerNDCSweeps.click()
+        return; // stop further execution
+        }
             await expect.soft(this.tbl_NDCSweeps).toBeVisible()
         }
+        
         const rows = await this.tbl_NDCSweepsAll.all();
         const prodData = [];
 
@@ -1108,8 +1175,8 @@ exports.CashPosting = class CashPosting {
                 Test_Status: testRow?.Status || "Missing",
                 Prod_Date: prodRow?.Date || "Missing",
                 Prod_Amount: prodRow?.Amount || "Missing",
-                Prod_BillingSysDesc: prodRow?.TypeCode || "Missing",
-                Prod_BillingSysDesc: prodRow?.Description || "Missing",
+                Prod_TypeCode: prodRow?.TypeCode || "Missing",
+                Prod_Description: prodRow?.Description || "Missing",
                 Prod_Status: prodRow?.Status || "Missing",
             });
             continue;
@@ -1126,8 +1193,8 @@ exports.CashPosting = class CashPosting {
                     Test_Status: testRow?.Status || "Missing",
                     Prod_Date: prodRow?.Date || "Missing",
                     Prod_Amount: prodRow?.Amount || "Missing",
-                    Prod_BillingSysDesc: prodRow?.TypeCode || "Missing",
-                    Prod_BillingSysDesc: prodRow?.Description || "Missing",
+                    Prod_TypeCode: prodRow?.TypeCode || "Missing",
+                    Prod_Description: prodRow?.Description || "Missing",
                     Prod_Status: prodRow?.Status || "Missing",
                 });
             }
