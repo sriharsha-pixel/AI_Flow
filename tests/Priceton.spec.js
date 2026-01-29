@@ -138,7 +138,6 @@ test("Comparing Stage Env Data with Prod Env Data", async({page})=>{
     await page.reload();
 
     await page.waitForTimeout(parseInt(process.env.mediumWait));
-    await cashPosting.firstcard.waitFor({state: 'visible'});
     await cashPosting.clickOnFirstCard();
     await page.waitForTimeout(parseInt(process.env.mediumWait));
     await cashPosting.totalTransaction.waitFor({state:'visible'});

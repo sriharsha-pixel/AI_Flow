@@ -4,7 +4,7 @@ exports.LoginPage = class LoginPage {
   constructor(test, page) {
     this.test = test;
     this.page = page;
-    this.signInBtn=page.locator("//a[text()='Sign in']");
+    this.signInBtn=page.locator("//button/*[contains(text(),'Sign in')]");
     this.googleSignIn=page.locator("//button[contains(text(),'Continue with Google')]");
     this.googleNextBtn=page.locator("//span[text()='Next']");
     this.googleEmail=page.locator("//input[@aria-label='Email or phone']");
@@ -123,7 +123,7 @@ exports.LoginPage = class LoginPage {
     await this.test.step("The page is loading, please wait", async () => {
       await this.page.waitForTimeout(parseInt(process.env.smallWait));
     });
-    await this.clickOnSignBtn();
+    //await this.clickOnSignBtn();
     await this.clickOnMicrosoftLogInBtn();
     await this.fillingEmail(email);
     await this.test.step("The page is loading, please wait", async () => {

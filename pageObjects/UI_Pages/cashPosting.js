@@ -96,13 +96,17 @@ exports.CashPosting = class CashPosting {
         this.tbl_cashReconciliationReport_unMatchedBillingSystemTransactions = page.locator("//div[text()='Unmatched Billing System Transactions:']//following::div[1]//span")
         this.header_cashReconciliationReport_Reconciliation=page.locator("//h3[text()='Reconciliation:']")
         this.tbl_cashReconciliationReport_Reconciliation= page.locator("//h3[text()='Reconciliation:']//following::div[1]//div//span")
-    
+        this.noReconciltext=page.locator("//div[contains(text(),'No reconciliation history yet')]");
     
     
     
     }
 
     clickOnFirstCard=async()=>{
+        await this.cashPostinggetStartedBtn.waitFor({ state: 'visible' });
+        await this.clickOnCashPostingBtn();
+        await this.noReconciltext.waitFor({ state: 'hidden' });
+        await this.page.waitForTimeout(parseInt(process.env.smallWait));
         await excuteSteps(this.test,this.firstcard,"click",`Clicking on first card`);
     }
 
