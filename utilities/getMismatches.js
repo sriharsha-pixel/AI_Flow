@@ -12,8 +12,11 @@ function getMismatches(prodData, testData) {
             return;
         }
         Object.keys(prodRow).forEach((key) => {
-            const prodValue = prodRow[key]?.toString().trim();
-            const testValue = testRow[key]?.toString().trim();
+            //const prodValue = prodRow[key]?.toString().trim();
+            //const testValue = testRow[key]?.toString().trim();
+
+            const prodValue = (prodRow[key] ?? "").toString().trim();
+            const testValue = (testRow[key] ?? "").toString().trim();
 
             if (prodValue !== testValue) {
                 mismatches.push({

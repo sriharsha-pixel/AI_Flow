@@ -1,24 +1,26 @@
 const { excuteSteps } = require("../../utilities/actions");
-const { test,expect } = require("@playwright/test");
+const { test, expect } = require("@playwright/test");
 exports.LoginPage = class LoginPage {
   constructor(test, page) {
     this.test = test;
     this.page = page;
-    this.signInBtn=page.locator("//button/*[contains(text(),'Sign in')]");
-    this.googleSignIn=page.locator("//button[contains(text(),'Continue with Google')]");
-    this.googleNextBtn=page.locator("//span[text()='Next']");
-    this.googleEmail=page.locator("//input[@aria-label='Email or phone']");
-    this.googlePassword=page.locator("//input[@aria-label='Enter your password']");
-    this.microsoftSignIn=page.locator("//button[contains(.,'Sign in with')]")
-    this.email=page.locator("//input[@type='email']");
-    this.nextBtn=page.locator("//input[@value='Next']");
-    this.password=page.locator("//input[@type='password']");
-    this.microsoftsignInButton=page.locator("//input[@value='Sign in']");
-    this.cashPostingHeader=page.locator("//h3[contains(text(),'Cash Posting')]");
-    this.yesBtn=page.locator("//input[@value='Yes']");
-    this.dontShowAgainBtn=page.locator("//input[@name='DontShowAgain']");
-    this.continueBtn=page.locator("//button[text()='Continue']");
-    this.loginBtn=page.locator("(//button[text()='Log in'])[1]");
+    this.signInBtn = page.locator("//button/*[contains(text(),'Sign in')]");
+    this.googleSignIn = page.locator("//button[contains(text(),'Continue with Google')]");
+    this.googleNextBtn = page.locator("//span[text()='Next']");
+    this.googleEmail = page.locator("//input[@aria-label='Email or phone']");
+    this.googlePassword = page.locator("//input[@aria-label='Enter your password']");
+    this.microsoftSignIn = page.locator("//button[contains(.,'Sign in with')]")
+    this.email = page.locator("//input[@type='email']");
+    this.nextBtn = page.locator("//input[@value='Next']");
+    this.password = page.locator("//input[@type='password']");
+    this.microsoftsignInButton = page.locator("//input[@value='Sign in']");
+    this.cashPostingHeader = page.locator("//h3[contains(text(),'Cash Posting')]");
+    this.yesBtn = page.locator("//input[@value='Yes']");
+    this.dontShowAgainBtn = page.locator("//input[@name='DontShowAgain']");
+    this.continueBtn = page.locator("//button[text()='Continue']");
+    this.loginBtn = page.locator("(//button[text()='Log in'])[1]");
+    // new changes (Harsha)
+    this.approveLogin = page.locator("//div[normalize-space(text())='Approve sign in request']");
   }
   launchingApplication = async (baseUrl) => {
     await excuteSteps(
@@ -48,7 +50,7 @@ exports.LoginPage = class LoginPage {
     );
   };
 
-  
+
   fillinggoogleEmail = async (email) => {
     await excuteSteps(
       this.test,
@@ -69,49 +71,49 @@ exports.LoginPage = class LoginPage {
     );
   };
 
-  clickOnGoogleNextBtn=async()=>{
-    await excuteSteps(this.test,this.googleNextBtn,"click",`Clicking on google next button`);
+  clickOnGoogleNextBtn = async () => {
+    await excuteSteps(this.test, this.googleNextBtn, "click", `Clicking on google next button`);
   };
 
-  clickOnGoogleSignInBtn=async()=>{
-    await excuteSteps(this.test,this.googleSignIn,"click",`Clicking on google sign in button`);
+  clickOnGoogleSignInBtn = async () => {
+    await excuteSteps(this.test, this.googleSignIn, "click", `Clicking on google sign in button`);
   }
 
-  clickOnDontShowAgainBtn=async()=>{
-    await excuteSteps(this.test,this.dontShowAgainBtn,"click",`Clicking on dont show again button`);
+  clickOnDontShowAgainBtn = async () => {
+    await excuteSteps(this.test, this.dontShowAgainBtn, "click", `Clicking on dont show again button`);
   };
 
-  clickOnContinueBtn=async()=>{
-    await excuteSteps(test,this.continueBtn,"click",`Clicking on Continue button`);
+  clickOnContinueBtn = async () => {
+    await excuteSteps(test, this.continueBtn, "click", `Clicking on Continue button`);
   };
 
-  clickOnSignBtn=async()=>{
-    await excuteSteps(this.test,this.signInBtn,"click",`Clicking on sign in button`);
+  clickOnSignBtn = async () => {
+    await excuteSteps(this.test, this.signInBtn, "click", `Clicking on sign in button`);
   };
 
-  clickOnLoginBtn=async()=>{
-    await excuteSteps(test,this.loginBtn,"click",`Clicking on Login in Button`);
-  };
-  
-  clickOnNextBtn = async()=>{
-    await excuteSteps(this.test,this.nextBtn,"click",`Clicking on next button`);
+  clickOnLoginBtn = async () => {
+    await excuteSteps(test, this.loginBtn, "click", `Clicking on Login in Button`);
   };
 
-  clickOnMicrosoftLogInBtn=async()=>{
-    await excuteSteps(this.test,this.microsoftSignIn,"click",`Clicking on microsoft log in button`);
-  };
-  clickOnMicrosoftSignInBtn =async()=>{
-    await excuteSteps(this.test,this.microsoftsignInButton,"click",`Clicking on microsoft sign in`)
-  };
-  clickOnYesBtn=async()=>{
-    await excuteSteps(this.test,this.yesBtn,"click",`Clicking on yes button for log in`);
+  clickOnNextBtn = async () => {
+    await excuteSteps(this.test, this.nextBtn, "click", `Clicking on next button`);
   };
 
-  loginToLovable=async(email,pwd)=>{
+  clickOnMicrosoftLogInBtn = async () => {
+    await excuteSteps(this.test, this.microsoftSignIn, "click", `Clicking on microsoft log in button`);
+  };
+  clickOnMicrosoftSignInBtn = async () => {
+    await excuteSteps(this.test, this.microsoftsignInButton, "click", `Clicking on microsoft sign in`)
+  };
+  clickOnYesBtn = async () => {
+    await excuteSteps(this.test, this.yesBtn, "click", `Clicking on yes button for log in`);
+  };
+
+  loginToLovable = async (email, pwd) => {
     await this.test.step("The page is loading, please wait", async () => {
       await this.page.waitForTimeout(parseInt(process.env.smallWait));
     });
-    
+
     await this.fillingEmail(email);
     await this.clickOnContinueBtn();
     await this.fillingPassword(pwd);
@@ -123,7 +125,6 @@ exports.LoginPage = class LoginPage {
     await this.test.step("The page is loading, please wait", async () => {
       await this.page.waitForTimeout(parseInt(process.env.smallWait));
     });
-    //await this.clickOnSignBtn();
     await this.clickOnMicrosoftLogInBtn();
     await this.fillingEmail(email);
     await this.test.step("The page is loading, please wait", async () => {
@@ -144,13 +145,22 @@ exports.LoginPage = class LoginPage {
       await this.page.waitForTimeout(parseInt(process.env.smallWait));
     });
 
-    await this.clickOnMicrosoftSignInBtn(); 
+    await this.clickOnMicrosoftSignInBtn();
     await this.clickOnDontShowAgainBtn();
     await this.clickOnYesBtn();
-    await this.cashPostingHeader.waitFor({state: 'visible'});
+    await this.cashPostingHeader.waitFor({ state: 'visible' });
   };
 
-
-
+  loginWithValidUnauthorizedCredentials = async (email, pwd) => {
+    await this.microsoftSignIn.waitFor({ state: 'visible' });
+    await this.clickOnMicrosoftLogInBtn();
+    await this.fillingEmail(email);
+    await this.clickOnNextBtn();
+    await this.fillingPassword(pwd);
+    await this.clickOnMicrosoftSignInBtn();
+    await expect(this.approveLogin, `Approve Sign In Request is Displayed`)
+      .toBeVisible({ timeout: 30000 });
+    await expect(this.page).not.toHaveURL(/dashboard/)
+  }
 
 };
