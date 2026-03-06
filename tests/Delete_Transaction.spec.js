@@ -10,7 +10,7 @@ test.beforeEach("Login to AI Flow", async ({ page }) => {
     await loginPage.loginWithValidCredentials([process.env.user_name], [process.env.password]);
 });
 
-test("Verify Deleting a Bank Transaction is only possible for transactions from a PDF File", async ({ page }) => {
+test.only("Verify Deleting a Bank Transaction is only possible for transactions from a PDF File", async ({ page }) => {
     const cashPosting = new sections.CashPosting(test, page);
     await cashPosting.navigateToCashPosting();
 
@@ -19,6 +19,7 @@ test("Verify Deleting a Bank Transaction is only possible for transactions from 
     for (let i = 0; i < cardCount; i++) {
         await cashPosting.reconciliationCards.nth(i).click();
         await cashPosting.headerDepositsInBankRFMS.waitFor({ state: 'visible' });
+        if(await cashPosting.readUploadedPdfFiles()) return;
     }
 })
 

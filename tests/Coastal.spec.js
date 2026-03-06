@@ -3,7 +3,7 @@ const sections = require("../pageObjects/UI_Pages/pageIndex");
 const path = require("path");
 require("dotenv").config();
 
-test.only("Getting summary and Matched Transaction details from Stage Env", async ({ page }) => {
+test("Getting summary and Matched Transaction details from Stage Env", async ({ page }) => {
   const loginPage = new sections.LoginPage(test, page);
   await loginPage.launchingApplication([process.env.base_url_env]);
   await loginPage.loginToLovable([process.env.lovableUsername], [process.env.lovablePassword]);

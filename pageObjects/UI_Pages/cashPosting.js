@@ -10,6 +10,7 @@ const fs = require("fs");
 const { scrollToElement } = require("../../utilities/scrollInView");
 const { getFilesFromFolder } = require("../../utilities/getFilesFromFolder");
 const { da } = require("@faker-js/faker");
+const pdfParse = require("pdf-parse");
 
 exports.CashPosting = class CashPosting {
     constructor(test, page) {
@@ -3156,6 +3157,53 @@ exports.CashPosting = class CashPosting {
         return false;
     };
 
+    /*readUploadedPdfFiles = async () => {
+        // Get all file names from the three sections
+        const bankFiles = await this.allBankStatementFiles.allTextContents();
+        const rfmsFiles = await this.allRFMSFiles.allTextContents();
+        const journalFiles = await this.allJournalBillingFiles.allTextContents();
+
+        // Combine all file names
+        const allFiles = [...bankFiles, ...rfmsFiles, ...journalFiles];
+
+        // Check if any file ends with .pdf
+        const hasPdf = allFiles.some(fileName => fileName.trim().toLowerCase().endsWith('.pdf'));
+        if (!hasPdf) return false; // No PDF file found in this card, continue
+
+        console.log("PDF found in this card");
+        const downloadBtn = await allFiles.locator("//following-sibling::button");
+        await excuteSteps(this.test, downloadBtn, "click", `Downloading pdf files`);
+        return true;
+    };*/
+
+    readUploadedPdfFiles = async () => {
+        let pdfFound = false;
+        const sections = [
+            this.allBankStatementFiles,
+            this.allRFMSFiles,
+            this.allJournalBillingFiles
+        ];
+        for (const section of sections) {
+            const count = await section.count();
+            for (let i = 0; i < count; i++) {
+                const fileLocator = section.nth(i);
+                const fileName = (await fileLocator.textContent()).trim().toLowerCase();
+                if (fileName.endsWith(".pdf")) {
+                    console.log(`PDF found: ${fileName}`);
+                    pdfFound = true;
+                    const downloadBtn = fileLocator.locator("//following-sibling::button");
+                    const [newPage] = await Promise.all([
+                        this.page.context().waitForEvent("page"),
+                        excuteSteps(this.test, downloadBtn, "click", `Downloading pdf file: ${fileName}`)
+                    ]);
+                    await newPage.waitForLoadState("load"); // wait until PDF page fully loads
+                    await newPage.close();
+                }
+            }
+        }
+        return pdfFound;
+    };
+
     deleteTransactionIfPdfExists = async () => {
         // Get all file names from the three sections
         const bankFiles = await this.allBankStatementFiles.allTextContents();
@@ -3182,10 +3230,7 @@ exports.CashPosting = class CashPosting {
             excuteSteps(this.test, this.exportToExcelBtn, "click", `Clicking on Export to Excel Button`)
         ]);
         // Absolute output folder path
-        const outputFolder = path.join(
-            process.cwd(),
-            "output"
-        );
+        const outputFolder = path.join(process.cwd(), "output");
         // Create folder if it doesn't exist
         if (!fs.existsSync(outputFolder)) {
             fs.mkdirSync(outputFolder, { recursive: true });
