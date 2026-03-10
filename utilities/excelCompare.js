@@ -28,9 +28,18 @@ async function compareExcelsSheetWise(previewFile, prodFile) {
     const previewData = getAllSheetsData(previewFile);
     const prodData = getAllSheetsData(prodFile);
 
-    const mismatchFile = path.join(process.cwd(), "output", "Mismatch_Report_SheetWise.xlsx");
+    const mismatchFolder = path.join(process.cwd(), "output", "Mismatches");
 
-    if (fs.existsSync(mismatchFile)) fs.unlinkSync(mismatchFile);
+    // Ensure folder exists
+    if (!fs.existsSync(mismatchFolder)) {
+        fs.mkdirSync(mismatchFolder, { recursive: true });
+    }
+    const mismatchFile = path.join(mismatchFolder, "Mismatch_Report_SheetWise.xlsx");
+
+    // Remove old mismatch file if it exists
+    if (fs.existsSync(mismatchFile)) {
+        fs.unlinkSync(mismatchFile);
+    }
 
     let hasAnyMismatch = false;
 

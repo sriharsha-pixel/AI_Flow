@@ -17,10 +17,10 @@ test("Compare Excel Export Report - Preview vs Prod", async ({ browser }) => {
 
     const preview = new sections.CashPosting(test, previewPage);
     await preview.navigateToCashPosting();
-    await preview.reconciliationCards.nth(8).click();
+    await preview.reconciliationCards.nth(0).click();
     await preview.exportToExcelBtn.waitFor({ state: 'visible' });
 
-    const previewFile = await preview.clickExportToExcelBtn('preview.xlsx');
+    const previewFile = await preview.clickExportToExcelBtn('preview', 'preview.xlsx');
 
     await previewContext.close();
 
@@ -34,13 +34,13 @@ test("Compare Excel Export Report - Preview vs Prod", async ({ browser }) => {
 
     const prod = new sections.CashPosting(test, prodPage);
     await prod.navigateToCashPosting();
-    await prod.reconciliationCards.nth(3).click();
+    await prod.reconciliationCards.nth(0).click();
     await prod.exportToExcelBtn.waitFor({ state: 'visible' });
 
-    const prodFile = await prod.clickExportToExcelBtn('prod.xlsx');
+    const prodFile = await prod.clickExportToExcelBtn('prod', 'prod.xlsx');
 
     const hasMismatch = await compareExcelsSheetWise(previewFile, prodFile);
 
-    expect(hasMismatch, `Excel mismatch detected. See output/Mismatch_Report_SheetWise.xlsx`)
+    expect(hasMismatch, `Excel mismatch detected. See output/Mismatches/Mismatch_Report_SheetWise.xlsx`)
         .toBe(false);
 });

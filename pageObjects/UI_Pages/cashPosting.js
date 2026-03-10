@@ -3303,14 +3303,12 @@ exports.CashPosting = class CashPosting {
     return await this.hoverAndClickDeleteTransaction();
   }
 
-  clickExportToExcelBtn = async (fileName) => {
+  clickExportToExcelBtn = async (subfolder, fileName) => {
     const [download] = await Promise.all([
       this.page.waitForEvent('download'),
       excuteSteps(this.test, this.exportToExcelBtn, "click", `Clicking on Export to Excel Button`)
     ]);
-    // Absolute output folder path
-    const outputFolder = path.join(process.cwd(), "output");
-    // Create folder if it doesn't exist
+    const outputFolder = path.join(process.cwd(), "output", subfolder);
     if (!fs.existsSync(outputFolder)) {
       fs.mkdirSync(outputFolder, { recursive: true });
     }
