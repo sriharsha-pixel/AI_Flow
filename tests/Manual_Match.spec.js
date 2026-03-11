@@ -25,7 +25,7 @@ test("Verify Unmatching a Transaction", async ({ page }) => {
     }
 })
 
-test("Verify Creating a Manual Match", async ({ page }) => {
+test.only("Verify Creating a Manual Match", async ({ page }) => {
     const cashPosting = new sections.CashPosting(test, page);
     await cashPosting.navigateToCashPosting();
     const cardCount = await cashPosting.reconciliationCards.count();

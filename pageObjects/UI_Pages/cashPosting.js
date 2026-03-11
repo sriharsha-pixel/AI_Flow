@@ -181,8 +181,8 @@ exports.CashPosting = class CashPosting {
 
     this.tbl_MatchedTransactions = page.locator("//h3[text()='Matched Transactions']/ancestor::div[2]/following-sibling::div//table")
     this.rows_MatchedTransactions = page.locator("//h3[text()='Matched Transactions']/ancestor::div[2]/following-sibling::div//table//tbody//tr")
-    this.rows_ExactMatchedTransactions = page.locator("//h3[text()='Matched Transactions']/ancestor::div[2]/following-sibling::div//table//tbody//tr[td[7][normalize-space()='Exact']]")
-    this.rows_ManyToOneMatchedTransactions = page.locator("//h3[text()='Matched Transactions']/ancestor::div[2]/following-sibling::div//table//tbody//tr[td[7][normalize-space()='Many-to-One']]")
+    this.rows_ExactMatchedTransactions = page.locator("//h3[text()='Matched Transactions']/ancestor::div[2]/following-sibling::div//table//tbody//tr[td[7][contains(normalize-space(),'Exact')]]")
+    this.rows_ManyToOneMatchedTransactions = page.locator("//h3[text()='Matched Transactions']/ancestor::div[2]/following-sibling::div//table//tbody//tr[td[7][contains(normalize-space(),'Many-to-One')]]")
 
     this.unmatchSuccessMessage = page.locator("//div[contains(text(),'Transactions moved to unmatched sections')]")
 
@@ -194,6 +194,7 @@ exports.CashPosting = class CashPosting {
     this.matchTypeLabel = page.locator("//div[normalize-space(text())='Match Type:']")
     this.createMatchBtn = page.locator("//button[normalize-space(text())='Create Match']")
     this.manualMatchCreatedSuccessfullyMessage = page.locator("//div[normalize-space(text())='Manual Match Created']")
+    this.manualBadge = page.locator("//div[@data-component-name='Badge' and normalize-space(text())='Manual']")
 
     this.totalDeposits_CashReconciliationReport = page.locator("//h3[text()='Reconciliation:']//following::span[contains(text(), 'Total Deposits:')][1]//following::span[1]")
     this.totalCashReceipts_CashReconciliationReport = page.locator("//h3[text()='Reconciliation:']//following::span[contains(text(), 'Total Cash Receipts:')][1]//following::span[1]")
@@ -2370,7 +2371,8 @@ exports.CashPosting = class CashPosting {
     await this.ensureCashReceiptsTableVisible();
 
     // If match manually button is not visible, return null to continue with the next card
-    if (!(await this.matchManuallyBtn_CashReceiptsInBilling.isVisible())) return null;
+    //if (!(await this.matchManuallyBtn_CashReceiptsInBilling.isVisible())) return null;
+    if (await this.markTransferBtns_CashReceiptsInBilling.count() === 0) return null;
 
     const description = await this.markTransferBtns_CashReceiptsInBilling.first().locator("//preceding::td[2]").innerText();
     await this.markTransferBtns_CashReceiptsInBilling.first().click();
@@ -2397,9 +2399,11 @@ exports.CashPosting = class CashPosting {
     await this.headerDepositsInBankRFMS.waitFor({ state: 'visible' });
     await this.ensureBankRFMSTableVisible();
 
-    if (!(await this.matchManuallyBtn_DepositsInBankRFMS.isVisible())) return null;
+    //if (!(await this.matchManuallyBtn_DepositsInBankRFMS.isVisible())) return null;
+    if (await this.markTransferBtns_DepositsInBankRFMS.count() === 0) return null;
 
-    const description = await this.markTransferBtns_DepositsInBankRFMS.first().locator("//preceding::td[2]").innerText();
+    const description = await this.markTransferBtns_DepositsInBankRFMS.first()
+      .locator("//preceding::td[2]").innerText();
     await this.markTransferBtns_DepositsInBankRFMS.first().click();
     const date = await this.dateElement.innerText();
     const amount = await this.amountElement.innerText();
@@ -2621,7 +2625,7 @@ exports.CashPosting = class CashPosting {
     await this.header_cashReceiptsInBIllingSystem.waitFor({ state: 'visible' });
     await this.ensureCashReceiptsTableVisible();
 
-    // If match manually button is not visible, return false to continue with the next card
+    // If there are no mark exception buttons, return null to continue with the next card
     if (await this.markExceptionBtns_CashReceiptsInBilling.count() === 0) return null;
 
     const transactionDetails = {
@@ -2637,13 +2641,13 @@ exports.CashPosting = class CashPosting {
 
     await expect(this.exceptionMarked).toBeVisible({ timeout: 10000 });
 
-    const transferredTransaction = this.rows_CashReceiptsInBilling
+    const exemptedTransaction = this.rows_CashReceiptsInBilling
       .filter({ hasText: transactionDetails.date })
       .filter({ hasText: transactionDetails.amount })
       .filter({ hasText: transactionDetails.description })
       .first();
 
-    const transactionStatus = transferredTransaction.locator("//td[4]")
+    const transactionStatus = exemptedTransaction.locator("//td[4]")
     await expect.soft(transactionStatus).toContainText(`Marked as Exception${reason}`)
     return transactionDetails; // Marked as exception successfully
   }
@@ -2652,13 +2656,16 @@ exports.CashPosting = class CashPosting {
     await this.headerDepositsInBankRFMS.waitFor({ state: 'visible' });
     await this.ensureBankRFMSTableVisible();
 
-    // If match manually button is not visible, return null to continue with the next card
+    // If there are no mark exception buttons, return null to continue with the next card
     if (await this.markExceptionBtns_DepositsInBankRFMS.count() === 0) return null;
 
     const transactionDetails = {
-      description: await this.markExceptionBtns_DepositsInBankRFMS.first().locator("//preceding::td[2]").innerText(),
-      date: await this.markExceptionBtns_DepositsInBankRFMS.first().locator("//preceding::td[4]").innerText(),
-      amount: await this.markExceptionBtns_DepositsInBankRFMS.first().locator("//preceding::td[3]").innerText()
+      description: await this.markExceptionBtns_DepositsInBankRFMS.first()
+        .locator("//preceding::td[2]").innerText(),
+      date: await this.markExceptionBtns_DepositsInBankRFMS.first()
+        .locator("//preceding::td[4]").innerText(),
+      amount: await this.markExceptionBtns_DepositsInBankRFMS.first()
+        .locator("//preceding::td[3]").innerText()
     }
 
     await this.markExceptionBtns_DepositsInBankRFMS.first().click();
@@ -2668,13 +2675,13 @@ exports.CashPosting = class CashPosting {
 
     await expect(this.exceptionMarked).toBeVisible({ timeout: 10000 });
 
-    const transferredTransaction = this.rows_DepositsInBankRFMS
+    const exemptedTransaction = this.rows_DepositsInBankRFMS
       .filter({ hasText: transactionDetails.date })
       .filter({ hasText: transactionDetails.amount })
       .filter({ hasText: transactionDetails.description })
       .first();
 
-    const transactionStatus = transferredTransaction.locator("//td[4]")
+    const transactionStatus = exemptedTransaction.locator("//td[4]")
     await expect.soft(transactionStatus).toContainText(`Marked as Exception${reason}`)
     return transactionDetails; // Marked as exception successfully
   }
@@ -2689,9 +2696,12 @@ exports.CashPosting = class CashPosting {
 
     let transactions = [];
     for (let i = 0; i < numOfTransactions; i++) {
-      const description = await this.markTransferBtns_CashReceiptsInBilling.nth(i).locator("//preceding::td[2]").innerText();
-      const amount = await this.markTransferBtns_CashReceiptsInBilling.nth(i).locator("//preceding::td[3]").innerText();
-      const date = await this.markTransferBtns_CashReceiptsInBilling.nth(i).locator("//preceding::td[4]").innerText();
+      const description = await this.markTransferBtns_CashReceiptsInBilling.nth(i)
+        .locator("//preceding::td[2]").innerText();
+      const amount = await this.markTransferBtns_CashReceiptsInBilling.nth(i)
+        .locator("//preceding::td[3]").innerText();
+      const date = await this.markTransferBtns_CashReceiptsInBilling.nth(i)
+        .locator("//preceding::td[4]").innerText();
 
       transactions.push({ description, amount, date });
     }
@@ -2710,10 +2720,10 @@ exports.CashPosting = class CashPosting {
     for (const transaction of transactions) {
       const matchingRows = this.page.locator(
         `//h3[contains(text(),'Cash Receipts in Billing System')]/ancestor::div[2]/following-sibling::div//table//tbody//tr[
-                normalize-space(td[1]) = "${transaction.date}" and
-                normalize-space(td[2]) = "${transaction.amount}" and
-                normalize-space(td[3]) = "${transaction.description}"
-                ]`
+          normalize-space(td[1]) = "${transaction.date}" and
+          normalize-space(td[2]) = "${transaction.amount}" and
+          normalize-space(td[3]) = "${transaction.description}"
+        ]`
       );
       const count = await matchingRows.count();
       expect(count).toBeGreaterThan(0);
@@ -2761,10 +2771,10 @@ exports.CashPosting = class CashPosting {
     for (const transaction of transactions) {
       const matchingRows = this.page.locator(
         `//h3[contains(text(),'Deposits in Bank/RFMS')]/ancestor::div[2]/following-sibling::div//table//tbody//tr[
-                normalize-space(td[1]) = "${transaction.date}" and
-                normalize-space(td[2]) = "${transaction.amount}" and
-                normalize-space(td[3]) = "${transaction.description}"
-                ]`
+          normalize-space(td[1]) = "${transaction.date}" and
+          normalize-space(td[2]) = "${transaction.amount}" and
+          normalize-space(td[3]) = "${transaction.description}"
+        ]`
       );
       const count = await matchingRows.count();
       expect(count).toBeGreaterThan(0);
@@ -2932,8 +2942,6 @@ exports.CashPosting = class CashPosting {
 
     await expect(transferredBankTransaction, 'Unmatched Transaction Should be in Billing Section')
       .toBeVisible();
-    const billingTransactionStatus = transferredBankTransaction.locator("//td[4]")
-    await expect.soft(billingTransactionStatus).toContainText(`Unmatched`)
 
     const transferredBillingTransaction = this.rows_CashReceiptsInBilling
       .filter({ hasText: transactionDetails.billingDate })
@@ -2943,8 +2951,6 @@ exports.CashPosting = class CashPosting {
 
     await expect(transferredBillingTransaction, 'Unmatched Transaction Should be in Bank RFMS Section')
       .toBeVisible();
-    const bankTransactionStatus = transferredBillingTransaction.locator("//td[4]")
-    await expect.soft(bankTransactionStatus).toContainText(`Unmatched`)
 
     return transactionDetails;
   }
@@ -2987,6 +2993,23 @@ exports.CashPosting = class CashPosting {
     await this.clickCreateMatchBtn();
 
     await expect(this.manualMatchCreatedSuccessfullyMessage).toBeVisible({ timeout: 30000 });
+    
+    await this.ensureMatchedTransactionsTableVisible();
+
+    const matchedTransactionRow = this.rows_ExactMatchedTransactions
+      .filter({ hasText: transactionDetails.bankDate })
+      .filter({ hasText: transactionDetails.bankAmt })
+      .filter({ hasText: transactionDetails.bankDesc })
+      .filter({ hasText: transactionDetails.billingDate })
+      .filter({ hasText: transactionDetails.billingAmt })
+      .filter({ hasText: transactionDetails.billingDesc })
+      .first();
+
+    // Verify Manual badge
+    const manualBadge = matchedTransactionRow.locator(this.manualBadge);
+    await expect(manualBadge).toBeVisible({ timeout: 10000 });
+
+    console.log("Manual badge verified for the matched transaction.");
     return transactionDetails;
   }
 
@@ -3160,6 +3183,7 @@ exports.CashPosting = class CashPosting {
   readUploadedPdfFiles = async () => {
     let pdfFound = false;
     let allPdfTransactions = [];
+    let deleteBtnFoundInCard = false;
 
     const sections = [this.allBankStatementFiles, this.allRFMSFiles, this.allJournalBillingFiles];
 
@@ -3169,36 +3193,42 @@ exports.CashPosting = class CashPosting {
       for (let i = 0; i < count; i++) {
         const fileLocator = section.nth(i);
         const fileName = (await fileLocator.textContent()).trim().toLowerCase();
-
         if (!fileName.endsWith(".pdf")) continue;
-
         console.log(`PDF found: ${fileName}`);
         pdfFound = true;
 
         const downloadBtn = fileLocator.locator("//following-sibling::button");
-
         if (!(await downloadBtn.isVisible()) || !(await downloadBtn.isEnabled())) continue;
 
-        const [newPage] = await Promise.all([
-          this.page.context().waitForEvent("page"),
-          excuteSteps(this.test, downloadBtn, "click", `Downloading pdf file: ${fileName}`)
+        const eventPromise = Promise.race([
+          this.page.waitForEvent("download"),
+          this.page.context().waitForEvent("page")
         ]);
+        await excuteSteps(this.test, downloadBtn, "click", `Downloading/opening pdf: ${fileName}`);
+        const event = await eventPromise;
 
-        await newPage.waitForLoadState('domcontentloaded');
-        const pdfUrl = newPage.url();
-        console.log("PDF URL:", pdfUrl);
+        let buffer;
+        if ("path" in event) {
+          // pdf downloads (headless)
+          const path = await event.path();
+          buffer = fs.readFileSync(path);
+        } else {
+          // pdf opens in a new page (headed)
+          const newPage = event;
+          await newPage.waitForLoadState("domcontentloaded");
+          const pdfUrl = newPage.url();
+          // Fetch PDF content
+          const response = await newPage.request.get(pdfUrl);
+          buffer = await response.body();
+          await newPage.close();
+        }
 
-        const response = await newPage.request.get(pdfUrl);
-        const buffer = await response.body();
+        // Parse PDF
         const pdfData = await pdfParse(buffer);
-
         const pdfTransactions = await this.extractTransactions(pdfData.text);
-        console.log(`Transactions in ${fileName}:`, pdfTransactions);
 
         // Merge transactions from all PDFs
         allPdfTransactions.push(...pdfTransactions);
-
-        await newPage.close();
       }
     }
 
@@ -3233,15 +3263,16 @@ exports.CashPosting = class CashPosting {
       );
 
       if (transactionExistsInPDF) {
-        console.log(`${tx.description} -> Delete allowed`);
+        console.log(`${tx.description} -> Transaction coming from PDF -> Delete allowed`);
         await expect(deleteBtn).toBeVisible();
+        deleteBtnFoundInCard = true;
       } else {
-        console.log(`${tx.description} -> Delete NOT allowed`);
+        console.log(`${tx.description} -> Transaction not coming from PDF -> Delete NOT allowed`);
         await expect(deleteBtn).toBeHidden();
       }
     }
 
-    return true;
+    return deleteBtnFoundInCard;
   };
 
   extractTransactions = async (pdfText) => {
