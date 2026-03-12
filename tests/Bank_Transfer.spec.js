@@ -49,7 +49,6 @@ test("Bulk Mark as Bank Transfer", async ({ page }) => {
 
         const numOfTransactions = await cashPosting.bulkMarkAsBankTransfer();
         if (numOfTransactions) {
-            console.log(`Marked ${transactionDetails} as Bank Transfer`)
             console.log(`Bulk marked ${numOfTransactions} transactions as Bank Transfer`);
             return;
         }
