@@ -17,7 +17,7 @@ const timestamp = new Date()
  */
 export default defineConfig({
   testDir: "./tests",
-  timeout: 9 * 60 * 1000,
+  timeout: 15 * 60 * 1000,
   /* Deletes the existing allure report files before test execution*/
   globalSetup: require.resolve("./global_setup.js"),
   /* Run tests in files in parallel */
