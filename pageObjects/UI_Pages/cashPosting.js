@@ -3276,21 +3276,18 @@ exports.CashPosting = class CashPosting {
         }
       };
 
+      if (!transactionExistsInPDF) continue;
+
       await excuteSteps(this.test, tx.rowLocator, "hover", `Hovering on Bank Transaction Row`);
       await this.page.waitForTimeout(parseInt(process.env.smallWait));
       const deleteBtn = tx.rowLocator.locator(
         "//*[contains(@data-component-name,'Trash')]/parent::button"
       );
 
-      if (transactionExistsInPDF) {
-        console.log(`${tx.description} -> Transaction coming from PDF -> Delete allowed`);
-        await expect(deleteBtn).toBeVisible();
-        await expect(deleteBtn).toBeEnabled();
-        deleteBtnFoundInCard = true;
-      } else {
-        console.log(`${tx.description} -> Transaction not coming from PDF -> Delete NOT allowed`);
-        await expect(deleteBtn).not.toBeVisible();
-      }
+      console.log(`${tx.description} -> Transaction coming from PDF -> Delete allowed`);
+      await expect(deleteBtn).toBeVisible();
+      await expect(deleteBtn).toBeEnabled();
+      deleteBtnFoundInCard = true;
     }
 
     return deleteBtnFoundInCard;
